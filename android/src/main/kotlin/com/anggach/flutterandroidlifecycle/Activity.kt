@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import io.flutter.app.FlutterActivity
 import io.flutter.plugin.common.EventChannel
+import io.flutter.app.FlutterFragmentActivity
 
 class OnStartStreamHandler: EventChannel.StreamHandler {
 
@@ -87,7 +88,7 @@ class OnPauseStreamHandler: EventChannel.StreamHandler {
 
 }
 
-open class FlutterAndroidLifecycleActivity: FlutterActivity() {
+open class FlutterAndroidLifecycleFragmentActivity: FlutterFragmentActivity() {
 
     private var onStartStreamHandler: OnStartStreamHandler? = null
     private var onResumeStreamHandler: OnResumeStreamHandler? = null
